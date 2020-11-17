@@ -48,9 +48,10 @@ public class Game {
 	 * 
 	 * @param frog
 	 */
-	public void setFrog(IFrog frog) {
+	public void setFrog(IFrog frog)	 {
 		this.frog = frog;
 	}
+
 
 	/**
 	 * Lie l'objet environment a la partie
@@ -76,7 +77,9 @@ public class Game {
 	 * @return true si le partie est perdue
 	 */
 	public boolean testLose() {
-		// TODO
+		if( environment.isSafe(this.frog.getPosition()) == false){
+			return true;
+		}
 		return false;
 	}
 
@@ -87,8 +90,7 @@ public class Game {
 	 * @return true si la partie est gagnée
 	 */
 	public boolean testWin() {
-		// TODO
-		return false;
+		return environment.isWinningPosition(this.frog.getPosition());
 	}
 
 	/**
