@@ -26,7 +26,7 @@ public class Main {
 		//Création de la partie
 		Game game = new Game(graphic, width, height, minSpeedInTimerLoops, defaultDensity);
 		//Création et liason de la grenouille
-		IFrog frog = new Frog(game);
+		IFrog frog = new Frog(game,width/2);
 		game.setFrog(frog);
 		graphic.setFrog(frog);
 		//Création et liaison de l'environnement
